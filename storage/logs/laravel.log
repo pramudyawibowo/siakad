@@ -102,3 +102,128 @@
 #30 /Users/fai/Documents/siakad-smk/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #31 {main}
 "} 
+[2021-12-18 17:22:41] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (SQL: insert into `hari` (`id`, `nama_hari`, `created_at`, `updated_at`) values (1, Senin, 2021-12-18 17:22:41, 2021-12-18 17:22:41)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (SQL: insert into `hari` (`id`, `nama_hari`, `created_at`, `updated_at`) values (1, Senin, 2021-12-18 17:22:41, 2021-12-18 17:22:41)) at /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(743): Illuminate\\Database\\Connection->runQueryCallback('insert into `ha...', Array, Object(Closure))
+#1 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(723): Illuminate\\Database\\Connection->tryAgainIfCausedByLostConnection(Object(Illuminate\\Database\\QueryException), 'insert into `ha...', Array, Object(Closure))
+#2 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(632): Illuminate\\Database\\Connection->handleQueryException(Object(Illuminate\\Database\\QueryException), 'insert into `ha...', Array, Object(Closure))
+#3 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('insert into `ha...', Array, Object(Closure))
+#4 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(416): Illuminate\\Database\\Connection->statement('insert into `ha...', Array)
+#5 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2661): Illuminate\\Database\\Connection->insert('insert into `ha...', Array)
+#6 /Users/fai/Documents/siakad-smk/database/seeds/HariSeeder.php(19): Illuminate\\Database\\Query\\Builder->insert(Array)
+#7 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): HariSeeder->run()
+#8 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#10 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#13 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(48): Illuminate\\Database\\Seeder->__invoke()
+#14 /Users/fai/Documents/siakad-smk/database/seeds/DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('HariSeeder')
+#15 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): DatabaseSeeder->run()
+#16 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#21 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#22 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(129): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#23 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#24 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#25 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#27 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#28 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#29 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Command.php(134): Illuminate\\Container\\Container->call(Array)
+#30 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#32 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(1009): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /Users/fai/Documents/siakad-smk/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] Connection refused at /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\\Database\\Connectors\\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'root', '', Array)
+#3 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#5 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#6 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#7 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(457): Illuminate\\Database\\Connection->getPdo()
+#8 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into `ha...', Array)
+#9 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(743): Illuminate\\Database\\Connection->runQueryCallback('insert into `ha...', Array, Object(Closure))
+#10 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(723): Illuminate\\Database\\Connection->tryAgainIfCausedByLostConnection(Object(Illuminate\\Database\\QueryException), 'insert into `ha...', Array, Object(Closure))
+#11 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(632): Illuminate\\Database\\Connection->handleQueryException(Object(Illuminate\\Database\\QueryException), 'insert into `ha...', Array, Object(Closure))
+#12 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('insert into `ha...', Array, Object(Closure))
+#13 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Connection.php(416): Illuminate\\Database\\Connection->statement('insert into `ha...', Array)
+#14 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2661): Illuminate\\Database\\Connection->insert('insert into `ha...', Array)
+#15 /Users/fai/Documents/siakad-smk/database/seeds/HariSeeder.php(19): Illuminate\\Database\\Query\\Builder->insert(Array)
+#16 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): HariSeeder->run()
+#17 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#22 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(48): Illuminate\\Database\\Seeder->__invoke()
+#23 /Users/fai/Documents/siakad-smk/database/seeds/DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('HariSeeder')
+#24 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): DatabaseSeeder->run()
+#25 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#27 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#28 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#29 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#30 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#31 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(129): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#32 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#33 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#34 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#35 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#36 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#37 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#38 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Command.php(134): Illuminate\\Container\\Container->call(Array)
+#39 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#40 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(1009): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#42 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 /Users/fai/Documents/siakad-smk/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 {main}
+"} 
+[2022-01-03 12:16:59] local.ERROR: Command "db" is not defined.
+
+Did you mean one of these?
+    db:seed
+    db:wipe {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"db\" is not defined.
+
+Did you mean one of these?
+    db:seed
+    db:wipe at /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php:676)
+[stacktrace]
+#0 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('db')
+#1 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/fai/Documents/siakad-smk/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-01-03 12:17:13] local.ERROR: Command "db:" is ambiguous.
+Did you mean one of these?
+    db:wipe Drop all tables, views, and types
+    db:seed Seed the database with records. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"db:\" is ambiguous.
+Did you mean one of these?
+    db:wipe Drop all tables, views, and types
+    db:seed Seed the database with records. at /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php:717)
+[stacktrace]
+#0 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('db:')
+#1 /Users/fai/Documents/siakad-smk/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/fai/Documents/siakad-smk/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/fai/Documents/siakad-smk/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
