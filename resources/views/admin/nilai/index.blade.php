@@ -15,7 +15,7 @@
               <tr>
                 <th rowspan="2">No.</th>
                 <th rowspan="2">Kode Mapel</th>
-                <th rowspan="2">Guru Mata Pelajaran</th>
+                <th rowspan="2">Dosen Mata Kuliah</th>
                 <th rowspan="2">KKM</th>
                 <th colspan="4" class="text-center">Predikat</th>
               </tr>

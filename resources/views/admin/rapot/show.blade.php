@@ -16,12 +16,12 @@
             <div class="col-md-12">
                 <table class="table" style="margin-top: -10px;">
                     <tr>
-                        <td>No Induk Siswa</td>
+                        <td>No Induk Mahasiswa</td>
                         <td>:</td>
                         <td>{{ $siswa->no_induk }}</td>
                     </tr>
                     <tr>
-                        <td>Nama Siswa</td>
+                        <td>Nama Mahasiswa</td>
                         <td>:</td>
                         <td>{{ $siswa->nama_siswa }}</td>
                     </tr>

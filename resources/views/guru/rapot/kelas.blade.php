@@ -11,12 +11,12 @@
             <div class="col-md-12" style="margin-top: -21px;">
                 <table class="table">
                     <tr>
-                        <td>Nama Guru</td>
+                        <td>Nama Dosen</td>
                         <td>:</td>
                         <td>{{ $guru->nama_guru }}</td>
                     </tr>
                     <tr>
-                        <td>Mata Pelajaran</td>
+                        <td>Mata Kuliah</td>
                         <td>:</td>
                         <td>{{ $guru->mapel->nama_mapel }}</td>
                     </tr>

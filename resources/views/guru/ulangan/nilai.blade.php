@@ -26,17 +26,17 @@
                         <td>{{ $kelas->guru->nama_guru }}</td>
                     </tr>
                     <tr>
-                        <td>Jumlah Siswa</td>
+                        <td>Jumlah Mahasiswa</td>
                         <td>:</td>
                         <td>{{ $siswa->count() }}</td>
                     </tr>
                     <tr>
-                        <td>Mata Pelajaran</td>
+                        <td>Mata Kuliah</td>
                         <td>:</td>
                         <td>{{ $guru->mapel->nama_mapel }}</td>
                     </tr>
                     <tr>
-                        <td>Guru Mata Pelajaran</td>
+                        <td>Dosen Mata Kuliah</td>
                         <td>:</td>
                         <td>{{ $guru->nama_guru }}</td>
                     </tr>
@@ -74,7 +74,7 @@
                     <thead>
                         <tr>
                             <th class="ctr">No.</th>
-                            <th>Nama Siswa</th>
+                            <th>Nama Mahasiswa</th>
                             <th class="ctr">ULHA 1</th>
                             <th class="ctr">ULHA 2</th>
                             <th class="ctr">UTS</th>

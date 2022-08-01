@@ -1,7 +1,7 @@
 @extends('template_backend.home')
 @section('heading', 'Ubah Foto')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('mahasiswa.index') }}">mahasiswa</a></li>
   <li class="breadcrumb-item active">Ubah Foto</li>
 @endsection
 @section('content')
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="nama_siswa">Nama Siswa</label>
+                        <label for="nama_siswa">Nama mahasiswa</label>
                         <input type="text" name="nama_siswa" class="form-control" value="{{ $siswa->nama_siswa }}" readonly>
                     </div>
                     <div class="form-group">
@@ -47,7 +47,7 @@
         <!-- /.card-body -->
 
         <div class="card-footer">
-            <a href="{{ route("siswa.index") }}" class="btn btn-default"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
+            <a href="{{ route("mahasiswa.index") }}" class="btn btn-default"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
             <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-upload"></i> &nbsp; Upload</button>
         </div>
       </form>

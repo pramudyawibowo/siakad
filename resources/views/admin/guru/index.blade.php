@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Data Guru')
+@section('heading', 'Data Dosen')
 @section('page')
-  <li class="breadcrumb-item active">Data Guru</li>
+  <li class="breadcrumb-item active">Data Dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -9,7 +9,7 @@
         <div class="card-header">
             <h3 class="card-title">
                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
-                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Guru
+                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Dosen
                 </button>
                 <a href="{{ route('guru.export_excel') }}" class="btn btn-success btn-sm my-3" target="_blank"><i class="nav-icon fas fa-file-export"></i> &nbsp; EXPORT EXCEL</a>
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#importExcel">
@@ -35,8 +35,8 @@
                                 </div>
                                 <div class="card-body">
                                     <ul>
-                                        <li>rows 1 = nama guru</li>
-                                        <li>rows 2 = nip guru</li>
+                                        <li>rows 1 = nama dosen</li>
+                                        <li>rows 2 = nip dosen</li>
                                         <li>rows 3 = jenis kelamin</li>
                                         <li>rows 4 = mata pelajaran</li>
                                     </ul>
@@ -78,8 +78,8 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Mapel</th>
-                    <th>Lihat Guru</th>
+                    <th>Nama Matkul</th>
+                    <th>Lihat Dosen</th>
                 </tr>
             </thead>
             <tbody>
@@ -103,18 +103,18 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
       <div class="modal-header">
-          <h4 class="modal-title">Tambah Data Guru</h4>
+          <h4 class="modal-title">Tambah Data Dosen</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
       </div>
       <div class="modal-body">
-          <form action="{{ route('guru.store') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('dosen.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="nama_guru">Nama Guru</label>
+                        <label for="nama_guru">Nama Dosen</label>
                         <input type="text" id="nama_guru" name="nama_guru" class="form-control @error('nama_guru') is-invalid @enderror">
                     </div>
                     <div class="form-group">
@@ -144,9 +144,9 @@
                         <input type="text" id="nip" name="nip" onkeypress="return inputAngka(event)" class="form-control @error('nip') is-invalid @enderror">
                     </div>
                     <div class="form-group">
-                        <label for="mapel_id">Mapel</label>
+                        <label for="mapel_id">Matkul</label>
                         <select id="mapel_id" name="mapel_id" class="select2bs4 form-control @error('mapel_id') is-invalid @enderror">
-                            <option value="">-- Pilih Mapel --</option>
+                            <option value="">-- Pilih Matkul --</option>
                             @foreach ($mapel as $data)
                                 <option value="{{ $data->id }}">{{ $data->nama_mapel }}</option>
                             @endforeach

@@ -21,24 +21,24 @@
         <div class="small-box bg-warning">
             <div class="inner" style="color: #FFFFFF;">
                 <h3>{{ $guru }}</h3>
-                <p>Guru</p>
+                <p>Dosen</p>
             </div>
             <div class="icon">
                 <i class="fas fa-id-card nav-icon"></i>
             </div>
-            <a href="{{ route('guru.index') }}" style="color: #FFFFFF !important;" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{ route('dosen.index') }}" style="color: #FFFFFF !important;" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <div class="col-lg-4 col-6">
         <div class="small-box bg-success">
             <div class="inner">
                 <h3>{{ $siswa }}</h3>
-                <p>Siswa</p>
+                <p>Mahasiswa</p>
             </div>
             <div class="icon">
                 <i class="fas fa-id-card nav-icon"></i>
             </div>
-            <a href="{{ route('siswa.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{ route('mahasiswa.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <div class="col-lg-4 col-6">
@@ -82,7 +82,7 @@
             <div class="card-body">
                 <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">DataGuru</span>
+                        <span class="text-bold text-lg">Data Dosen</span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
                         <span class="text-success">
@@ -113,7 +113,7 @@
             <div class="card-body">
                 <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">Data Siswa</span>
+                        <span class="text-bold text-lg">Data Mahasiswa</span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
                         <span class="text-success">
@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-12">
+    {{-- <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex">
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
 @section('script')
     <script type="text/javascript">

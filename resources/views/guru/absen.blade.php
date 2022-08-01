@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Absen Harian Guru')
+@section('heading', 'Absen Harian Dosen')
 @section('page')
-  <li class="breadcrumb-item active">Absen Harian guru</li>
+  <li class="breadcrumb-item active">Absen Harian dosen</li>
 @endsection
 @section('content')
 @php
@@ -14,7 +14,7 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama Guru</th>
+                    <th>Nama Dosen</th>
                     <th>Ket.</th>
                     <th width="80px">Jam Absen</th>
                 </tr>
@@ -36,7 +36,7 @@
 <div class="col-md-6">
     <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Absen Harian Guru</h3>
+        <h3 class="card-title">Absen Harian Dosen</h3>
       </div>
       <form action="{{ route('absen.simpan') }}" method="post">
         @csrf

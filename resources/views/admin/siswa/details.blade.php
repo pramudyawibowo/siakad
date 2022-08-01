@@ -1,8 +1,8 @@
 @extends('template_backend.home')
-@section('heading', 'Details Siswa')
+@section('heading', 'Details mahasiswa')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
-  <li class="breadcrumb-item active">Details Siswa</li>
+  <li class="breadcrumb-item active"><a href="{{ route('mahasiswa.index') }}">mahasiswa</a></li>
+  <li class="breadcrumb-item active">Details mahasiswa</li>
 @endsection
 @section('content')
 <div class="col-md-12">

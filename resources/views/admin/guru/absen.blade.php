@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Absensi Guru')
+@section('heading', 'Absensi Dosen')
 @section('page')
-    <li class="breadcrumb-item active">Absensi guru</li>
+    <li class="breadcrumb-item active">Absensi dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -11,7 +11,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Guru</th>
+                    <th>Nama Dosen</th>
                     <th>Cek Absensi</th>
                 </tr>
             </thead>

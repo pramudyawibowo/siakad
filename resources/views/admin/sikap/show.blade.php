@@ -16,7 +16,7 @@
             <div class="col-md-12">
                 <table class="table" style="margin-top: -10px;">
                     <tr>
-                        <td>No Induk Siswa</td>
+                        <td>No Induk Mahasiswa</td>
                         <td>:</td>
                         <td>{{ $siswa->no_induk }}</td>
                     </tr>
@@ -69,7 +69,7 @@
                     <thead>
                         <tr>
                             <th rowspan="2" class="ctr">No.</th>
-                            <th rowspan="2">Nama Siswa</th>
+                            <th rowspan="2">Nama mahasiswa</th>
                             <th colspan="3" class="ctr">Nilai Sikap</th>
                         </tr>
                         <tr>

@@ -21,7 +21,7 @@
               <input type="hidden" name="role" value="{{ Auth::user()->guru(Auth::user()->id_card)->role }}">
               <div class="col-md-6">
                   <div class="form-group">
-                      <label for="name">Nama Guru</label>
+                      <label for="name">Nama Dosen</label>
                       <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control @error('name') is-invalid @enderror">
                   </div>
                   <div class="form-group">
@@ -90,7 +90,7 @@
                       <input type="text" id="no_induk" name="no_induk" value="{{ Auth::user()->siswa(Auth::user()->no_induk)->no_induk }}" class="form-control" disabled>
                   </div>
                   <div class="form-group">
-                      <label for="name">Nama Siswa</label>
+                      <label for="name">Nama Mahasiswa</label>
                       <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control @error('name') is-invalid @enderror">
                   </div>
                   <div class="form-group">

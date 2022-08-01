@@ -26,7 +26,15 @@
             <tbody>
                 @foreach ($user as $role => $data)
                   <tr>
-                    <td>{{ $role }}</td>
+                    <td>
+                      @if($role == "Guru")
+                        {{"Dosen"}}
+                      @elseif($role == "Siswa")
+                        {{"Mahasiswa"}}
+                      @else
+                        {{$role}}
+                      @endif
+                    </td>
                     <td>{{ $data->count() }}</td>
                     <td>
                       <a href="{{ route('user.show', Crypt::encrypt($role)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
@@ -69,8 +77,8 @@
                     <option value="">-- Select {{ __('Level User') }} --</option>
                     <option value="Admin">Admin</option>
                     <option value="Operator">Operator</option>
-                    <option value="Guru">Guru</option>
-                    <option value="Siswa">Siswa</option>
+                    <option value="Guru">Dosen</option>
+                    <option value="Siswa">Mahasiswa</option>
                   </select>
                   @error('role')
                     <span class="invalid-feedback" role="alert">

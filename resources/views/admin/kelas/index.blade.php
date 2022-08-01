@@ -35,7 +35,7 @@
                             @csrf
                             @method('delete')
                             <button type="button" class="btn btn-info btn-sm" onclick="getSubsSiswa({{$data->id}})" data-toggle="modal" data-target=".view-siswa">
-                              <i class="nav-icon fas fa-users"></i> &nbsp; View Siswa
+                              <i class="nav-icon fas fa-users"></i> &nbsp; View Mahasiswa
                             </button>
                             <button type="button" class="btn btn-info btn-sm" onclick="getSubsJadwal({{$data->id}})" data-toggle="modal" data-target=".view-jadwal">
                               <i class="nav-icon fas fa-calendar-alt"></i> &nbsp; View Jadwal
@@ -101,7 +101,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="judul-siswa">View Siswa</h4>
+        <h4 class="modal-title" id="judul-siswa">View Mahasiswa</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -113,20 +113,20 @@
               <table class="table table-bordered table-striped table-hover" width="100%">
                 <thead>
                   <tr>
-                    <th>No Induk Siswa</th>
-                    <th>Nama Siswa</th>
+                    <th>No Induk Mahasiswa</th>
+                    <th>Nama Mahasiswa</th>
                     <th>L/P</th>
-                    <th>Foto Siswa</th>
+                    <th>Foto Mahasiswa</th>
                   </tr>
                 </thead>
                 <tbody id="data-siswa">
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>No Induk Siswa</th>
-                    <th>Nama Siswa</th>
+                    <th>No Induk Mahasiswa</th>
+                    <th>Nama Mahasiswa</th>
                     <th>L/P</th>
-                    <th>Foto Siswa</th>
+                    <th>Foto Mahasiswa</th>
                   </tr>
                 </tfoot>
               </table>
@@ -252,7 +252,7 @@
         type:"GET",
         data:"id="+parent,
         dataType:"JSON",
-        url:"{{ url('/siswa/view/json') }}",
+        url:"{{ url('/mahasiswa/view/json') }}",
         success:function(result){
           // console.log(result);
           var siswa = "";

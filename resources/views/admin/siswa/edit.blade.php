@@ -1,19 +1,19 @@
 @extends('template_backend.home')
-@section('heading', 'Edit Siswa')
+@section('heading', 'Edit mahasiswa')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
-  <li class="breadcrumb-item active">Edit Siswa</li>
+  <li class="breadcrumb-item active"><a href="{{ route('mahasiswa.index') }}">mahasiswa</a></li>
+  <li class="breadcrumb-item active">Edit mahasiswa</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
     <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Edit Data Siswa</h3>
+        <h3 class="card-title">Edit Data mahasiswa</h3>
       </div>
       <!-- /.card-header -->
       <!-- form start -->
-      <form action="{{ route('siswa.update', $siswa->id) }}" method="post">
+      <form action="{{ route('mahasiswa.update', $siswa->id) }}" method="post">
         @csrf
         @method('patch')
         <div class="card-body">
@@ -24,7 +24,7 @@
                     <input type="text" id="no_induk" name="no_induk" value="{{ $siswa->no_induk }}" class="form-control" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="nama_siswa">Nama Siswa</label>
+                    <label for="nama_siswa">Nama mahasiswa</label>
                     <input type="text" id="nama_siswa" name="nama_siswa" value="{{ $siswa->nama_siswa }}" class="form-control @error('nama_siswa') is-invalid @enderror">
                 </div>
                 <div class="form-group">

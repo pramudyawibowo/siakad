@@ -3,14 +3,14 @@
   Data Siswa {{ $kelas->nama_kelas }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('mahasiswa.index') }}">mahasiswa</a></li>
   <li class="breadcrumb-item active">{{ $kelas->nama_kelas }}</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('siswa.index') }}" class="btn btn-default btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
+            <a href="{{ route('mahasiswa.index') }}" class="btn btn-default btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Siswa</th>
+                    <th>Nama mahasiswa</th>
                     <th>No Induk</th>
                     <th>Foto</th>
                     <th>Aksi</th>
@@ -37,11 +37,11 @@
                             {{-- https://siakad.didev.id/siswa/ubah-foto/{{$data->id}} --}}
                         </td>
                         <td>
-                            <form action="{{ route('siswa.destroy', $data->id) }}" method="post">
+                            <form action="{{ route('mahasiswa.destroy', $data->id) }}" method="post">
                                 @csrf
                                 @method('delete')
-                                <a href="{{ route('siswa.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm mt-2"><i class="nav-icon fas fa-id-card"></i> &nbsp; Detail</a>
-                                <a href="{{ route('siswa.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                                <a href="{{ route('mahasiswa.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm mt-2"><i class="nav-icon fas fa-id-card"></i> &nbsp; Detail</a>
+                                <a href="{{ route('mahasiswa.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                                 <button class="btn btn-danger btn-sm mt-2"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                             </form>
                         </td>

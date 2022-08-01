@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Trash Mapel')
+@section('heading', 'Trash Matkul')
 @section('page')
-  <li class="breadcrumb-item active">Trash Mapel</li>
+  <li class="breadcrumb-item active">Trash Matkul</li>
 @endsection
 @section('content')
 @php
@@ -10,7 +10,7 @@
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Trash Data Mapel</h3>
+          <h3 class="card-title">Trash Data Matkul</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Mapel</th>
+                    <th>Nama Matkul</th>
                     <th>Paket</th>
                     <th>Kelompok</th>
                     <th>Aksi</th>

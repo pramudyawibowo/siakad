@@ -10,8 +10,8 @@
               <table class="table table-striped table-hover">
                 <thead>
                   <tr>
-                    <th>Jam Pelajaran</th>
-                    <th>Mata Pelajaran</th>
+                    <th>Jam Kuliah</th>
+                    <th>Mata Kuliah</th>
                     <th>Kelas</th>
                     <th>Ruang Kelas</th>
                     <th>Ket.</th>
@@ -61,7 +61,7 @@
                   @endif
                   @elseif ($jam <= '07:00')
                     <tr>
-                      <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Pelajaran Hari ini Akan Segera Dimulai!</td>
+                      <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Kuliah Hari ini Akan Segera Dimulai!</td>
                     </tr>
                 @elseif (
                   $hari == '1' && $jam >= '16:15' ||
@@ -71,7 +71,7 @@
                   $hari == '5' && $jam >= '15:40'
                 )
                   <tr>
-                    <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Pelajaran Hari ini Sudah Selesai!</td>
+                    <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Kuliah Hari ini Sudah Selesai!</td>
                   </tr>
                 @elseif ($hari == '0' || $hari == '6')
                   <tr>
@@ -154,7 +154,7 @@
             if (jam <= '07:00') {
               $("#data-jadwal").html(
                 `<tr>
-                  <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Pelajaran Hari ini Akan Segera Dimulai!</td>
+                  <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Kuliah Hari ini Akan Segera Dimulai!</td>
                 </tr>`
               );
             } else if (
@@ -166,7 +166,7 @@
             ) {
               $("#data-jadwal").html(
                 `<tr>
-                  <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Pelajaran Hari ini Sudah Selesai!</td>
+                  <td colspan='5' style='background:#fff;text-align:center;font-weight:bold;font-size:18px;'>Jam Kuliah Hari ini Sudah Selesai!</td>
                 </tr>`
               );
             } else {

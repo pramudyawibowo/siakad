@@ -19,7 +19,7 @@
                     <input type="hidden" name="id" value="{{ $nilai->id }}">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="nama_gur">Nama Guru</label>
+                            <label for="nama_gur">Nama Dosen</label>
                             <input type="text" id="nama_gur" name="nama_gur" value="{{ $guru->nama_guru }}" class="form-control" readonly>
                         </div>
                         <div class="form-group">

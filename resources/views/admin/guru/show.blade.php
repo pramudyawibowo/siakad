@@ -1,16 +1,16 @@
 @extends('template_backend.home')
 @section('heading')
-  Data Guru {{ $mapel->nama_mapel }}
+  Data Dosen {{ $mapel->nama_mapel }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('dosen.index') }}">Dosen</a></li>
   <li class="breadcrumb-item active">{{ $mapel->nama_mapel }}</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('guru.index') }}" class="btn btn-default btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
+            <a href="{{ route('dosen.index') }}" class="btn btn-default btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -39,11 +39,11 @@
                         {{-- https://siakad.didev.id/guru/ubah-foto/{{$data->id}} --}}
                     </td>
                     <td>
-                        <form action="{{ route('guru.destroy', $data->id) }}" method="post">
+                        <form action="{{ route('dosen.destroy', $data->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <a href="{{ route('guru.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm mt-2"><i class="nav-icon fas fa-id-card"></i> &nbsp; Detail</a>
-                            <a href="{{ route('guru.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                            <a href="{{ route('dosen.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm mt-2"><i class="nav-icon fas fa-id-card"></i> &nbsp; Detail</a>
+                            <a href="{{ route('dosen.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                             <button class="btn btn-danger btn-sm mt-2"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                         </form>
                     </td>

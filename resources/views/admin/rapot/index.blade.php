@@ -21,7 +21,7 @@
               <thead>
                 <tr>
                   <th>No.</th>
-                  <th>Nama Siswa</th>
+                  <th>Nama Mahasiswa</th>
                   <th>No. Induk</th>
                   <th>Aksi</th>
               </thead>

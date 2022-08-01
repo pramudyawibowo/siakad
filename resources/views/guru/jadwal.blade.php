@@ -1,10 +1,10 @@
 @extends('template_backend.home')
-@section('heading', 'Jadwal Guru')
+@section('heading', 'Jadwal Dosen')
 @section('heading')
-    Jadwal Guru {{ Auth::user()->guru(Auth::user()->id_card)->nama_guru }}
+    Jadwal Dosen {{ Auth::user()->guru(Auth::user()->id_card)->nama_guru }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active">Jadwal Guru</li>
+  <li class="breadcrumb-item active">Jadwal Dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">

@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Data Siswa')
+@section('heading', 'Data mahasiswa')
 @section('page')
-  <li class="breadcrumb-item active">Data Siswa</li>
+  <li class="breadcrumb-item active">Data mahasiswa</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -9,7 +9,7 @@
         <div class="card-header">
             <h3 class="card-title">
                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
-                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Siswa
+                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data mahasiswa
                 </button>
                 <a href="{{ route('siswa.export_excel') }}" class="btn btn-success btn-sm my-3" target="_blank"><i class="nav-icon fas fa-file-export"></i> &nbsp; EXPORT EXCEL</a>
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#importExcel">
@@ -35,8 +35,8 @@
                                 </div>
                                 <div class="card-body">
                                     <ul>
-                                        <li>rows 1 = nama siswa</li>
-                                        <li>rows 2 = no induk siswa</li>
+                                        <li>rows 1 = nama mahasiswa</li>
+                                        <li>rows 2 = no induk mahasiswa</li>
                                         <li>rows 3 = jenis kelamin</li>
                                         <li>rows 4 = nama kelas</li>
                                     </ul>
@@ -106,13 +106,13 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
       <div class="modal-header">
-          <h4 class="modal-title">Tambah Data Siswa</h4>
+          <h4 class="modal-title">Tambah Data mahasiswa</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
       </div>
       <div class="modal-body">
-          <form action="{{ route('siswa.store') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('mahasiswa.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-6">
@@ -121,7 +121,7 @@
                         <input type="text" id="no_induk" name="no_induk" onkeypress="return inputAngka(event)" class="form-control @error('no_induk') is-invalid @enderror">
                     </div>
                     <div class="form-group">
-                        <label for="nama_siswa">Nama Siswa</label>
+                        <label for="nama_siswa">Nama mahasiswa</label>
                         <input type="text" id="nama_siswa" name="nama_siswa" class="form-control @error('nama_siswa') is-invalid @enderror">
                     </div>
                     <div class="form-group">
